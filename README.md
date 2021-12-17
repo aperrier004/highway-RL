@@ -17,8 +17,9 @@ The goal was to make it work on the highway environnement and to improve it.
 - The main file `highway.py` handles the whole thing
 - `models.py`contains 2 differents Agents, the basic DQN and the Dueling DQN
 
-## Results
-The results are pretty bad (the mean score is around 20) with the DQN and also the dueling DQN.
+## Models
+- DQN : The Deep Q Network estimates a Q-value for each action-state pair.
+- Dueling DQN : The Dueling network represents two separate estimators: one for the state value function and one for the state-dependent action advantage function.
 
 # Installation
 1 - Get the repository
@@ -37,3 +38,18 @@ The results are pretty bad (the mean score is around 20) with the DQN and also t
 3 - Launch a training  
 
     python highway.py
+    
+# Results
+The results are pretty bad (the mean score is around 20) with the DQN and also the dueling DQN.
+
+## Intermediate work
+
+Tested activation : tanh, sigmoid, relu, et lin -> stayed with linear because it prevents from normalisation step.
+
+Adaptation of the number of test epochs per training cycle: performance is better with more cycles, the number of epochs per cycle seems less influential. 
+
+Normalization of Q-values: no significant performance increase, not retained.
+
+## Additional ideas 
+
+Work with a memory buffer. Adjust the hyper-parameters of the model. 
