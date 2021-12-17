@@ -40,7 +40,7 @@ The goal was to make it work on the highway environnement and to improve it.
     python highway.py
     
 # Results
-The results are pretty bad (the mean score is around 20) with the DQN and also the dueling DQN.
+The trained DQN Dueling manages to change lanes depending on the case to dodge a few cars, but in the best case the score reachs 20 which causes the car to crash after only a few seconds. 
 
 ## Intermediate work
 
